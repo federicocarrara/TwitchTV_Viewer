@@ -1,0 +1,64 @@
+body {
+	text-align: center;
+	font-family:Lucida Console;
+	color: black;
+	background-color: white;
+	margin: 0;
+}
+.top {
+	display: inline-block;
+	width: 100%;
+}
+h2 {
+	float: left;
+	margin-left: 40%;
+}
+.bottons {
+	display: inline-block;
+	float: right;
+	margin-top: 23px;
+	margin-right: 28%;
+}
+#bottonBlue {
+	float: left;
+	width: 15px;
+  height: 15px;
+  border-radius: 25px;
+	background: blue;
+}
+#bottonBlack {
+	margin-left: 18px;
+	width: 15px;
+  height: 15px;
+  border-radius: 25px;
+	background: black;
+}
+#channels {
+	width: 45%;
+	padding-left: 0;
+	margin: auto;
+}
+#channels li {
+	list-style-type: none;
+	color: black;
+	border-style: solid;
+	border-color: blue;
+	background-color: #C0C0C0;
+	margin-bottom: 15px;
+	padding: 15px 45px 15px 0;
+}
+#channels a {
+	text-decoration: none;
+}
+#logo {
+	width: 46px;
+	float: left;
+	position: relative;
+  top: -15px;
+}
+#channels a li.offline {
+	border-color: black;
+}
+.hide {
+	display: none;
+}
