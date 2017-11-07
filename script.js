@@ -16,13 +16,13 @@ $(function(){
   }
 //functionality of black an blue bottons
   function filterChannelsBlack(){
-    $("#bottonBlack").click(function(){
+    $("#buttonBlack").click(function(){
       $("#channel:not(.offline)").addClass("hide");
       $(".offline").removeClass("hide");
     });
   }
   function filterChannelsBlue(){
-    $("#bottonBlue").click(function(){
+    $("#buttonBlue").click(function(){
       $(".offline").addClass("hide");
       $("#channel:not(.offline)").removeClass("hide");
     });
