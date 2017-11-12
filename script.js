@@ -1,5 +1,5 @@
 $(function(){
-  let channels = ["MedryBW", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+  let channels = ["MedryBW", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "RocketLeague"];
   function getChannelInfo(){
     channels.forEach(function(channel){
       let urlTwitchStream = "https://wind-bow.gomix.me/twitch-api/streams/" + channel + "/?callback=?"
@@ -14,7 +14,7 @@ $(function(){
       });
     });
   }
-//functionality of black an blue bottons
+//buttons functionalities
   function filterChannelsBlack(){
     $("#buttonBlack").click(function(){
       $("#channel:not(.offline)").addClass("hide");
@@ -27,7 +27,30 @@ $(function(){
       $("#channel:not(.offline)").removeClass("hide");
     });
   }
+  function filterChannelsAll(){
+    $("#all").click(function(){
+      $(".offline").removeClass("hide");
+      $("#channel:not(.offline)").removeClass("hide");
+    });
+  }
+  function hoverButtons() {
+    $("#buttonBlue").mouseover(function(){
+      $("#all").html("").html("Online")
+    });
+    $("#buttonBlue").mouseleave(function(){
+      $("#all").html("").html("All")
+    });
+    $("#buttonBlack").mouseover(function(){
+      $("#all").html("").html("Offline")
+    });
+    $("#buttonBlack").mouseleave(function(){
+      $("#all").html("").html("All")
+    });
+  }
+
   getChannelInfo();
   filterChannelsBlue();
   filterChannelsBlack();
+  filterChannelsAll();
+  hoverButtons();
 });
